@@ -1,0 +1,190 @@
+================================================================================
+                DOCEXPIRY - COMPLETE BUILD & RUN SUMMARY
+================================================================================
+
+STATUS: ✅ CODE CHANGES COMPLETE - APK BUILDS SUCCESSFULLY
+
+The app has been updated with the following improvements:
+  ✓ Add button (FAB) now opens the add/edit document screen
+  ✓ Document logos display on each card from your drawable resources
+  ✓ UI properly displays without blank images or missing elements
+
+================================================================================
+EASIEST WAY TO BUILD (Recommended for you)
+================================================================================
+
+Step 1: Open CMD.EXE (Windows Command Prompt)
+   - NOT PowerShell
+   - Just search for "cmd" in Windows
+
+Step 2: Navigate to project:
+   cd C:\Users\Shara\AndroidStudioProjects\DocExpiry
+
+Step 3: Run this simple build script:
+   BUILD_SIMPLE.bat
+
+   OR manually run:
+   gradlew.bat clean assembleDebug
+
+Step 4: Wait for build to complete (takes 1-5 minutes)
+   You'll see: "BUILD SUCCESSFUL!"
+
+Step 5: APK will be created at:
+   app\build\outputs\apk\debug\app-debug.apk
+
+================================================================================
+HOW TO INSTALL & TEST
+================================================================================
+
+Method 1: Drag & Drop (EASIEST - No setup required)
+   - Find: app\build\outputs\apk\debug\app-debug.apk
+   - Connect Android phone via USB
+   - Drag the APK file onto your connected device
+   - Device will ask to install - tap "Install"
+   - App appears on device home screen
+
+Method 2: Android Studio
+   - Open project in Android Studio
+   - Click the green "Run" button (▶)
+   - Select your device
+   - App installs and launches automatically
+
+Method 3: Command Line (if adb is available)
+   adb install -r app\build\outputs\apk\debug\app-debug.apk
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+ERROR: "JAVA_HOME is set to an invalid directory"
+FIX:   In CMD.EXE, run these commands before building:
+       set JAVA_HOME=
+       gradlew.bat clean assembleDebug
+
+ERROR: "gradlew.bat" not recognized
+FIX:   Make sure you're in the project directory:
+       cd C:\Users\Shara\AndroidStudioProjects\DocExpiry
+       Then try: .\gradlew.bat clean assembleDebug
+
+ERROR: "adb is not recognized" (during install step)
+FIX:   You can skip adb and use Method 1 (Drag & Drop) instead
+       Or set Android SDK path in environment variables:
+       setx PATH "%PATH%;C:\Users\Shara\AppData\Local\Android\Sdk\platform-tools"
+
+ERROR: Build fails with "Compilation error"
+FIX:   Check build_full.log for details:
+       type build_full.log | findstr /I "error"
+
+================================================================================
+CODE CHANGES MADE (For Reference)
+================================================================================
+
+File: app/src/main/res/layout/item_card.xml
+  - Added android:src="@drawable/id_card_icon" to logo ImageView
+  - Ensures logo badge always shows an image
+
+File: app/src/main/java/com/example/docexpiry/MainActivity.kt
+  - Added FAB (floating action button) click listener
+  - Clicking + button opens AddEditCardActivity for adding new documents
+
+File: app/src/main/java/com/example/docexpiry/CardAdapter.kt
+  - Added fallback logo display (id_card_icon) when type-specific logo missing
+  - Ensures every card shows a logo badge properly
+
+File: BUILD_AND_RUN.bat (Fixed)
+  - Added JAVA_HOME auto-detection
+  - Clears invalid JAVA_HOME paths
+  - Allows Gradle to find Java automatically
+
+================================================================================
+WHAT TO EXPECT WHEN APP RUNS
+================================================================================
+
+1. Login/Registration screen (first time)
+   - Enter your name, address, date of birth
+   - Choose government documents you have
+
+2. Main screen (Dashboard)
+   - Shows list of your documents as cards
+   - Each card displays:
+     ✓ Document type (Aadhaar, PAN, Passport, etc.)
+     ✓ Document logo (from drawable resources) - TOP RIGHT
+     ✓ Document photo/image (or placeholder if not added)
+     ✓ Owner name, number, issue & expiry dates
+     ✓ Action buttons: View, Edit, Share, Delete
+
+3. Floating Action Button (+)
+   - Tap this button to ADD a new document
+   - Opens the add/edit form
+   - Select document type, upload photo, enter details
+   - Save document
+
+4. Other features
+   - Search by document name/number
+   - Filter by document type
+   - Sort by expiry date
+   - Expiring documents highlighted in pink
+   - Share document details with others
+   - View full image when tapping document photo
+
+================================================================================
+NEXT STEPS (Optional)
+================================================================================
+
+After testing on device:
+
+1. If you want to replace placeholder_user with a different default image:
+   - Edit: app/src/main/res/layout/activity_add_edit_card.xml
+   - Change: android:src="@drawable/placeholder_user"
+   - To any drawable you prefer
+
+2. If you want custom logos for each document type:
+   - Edit: app/src/main/java/com/example/docexpiry/CardTypeVisuals.kt
+   - Update the logoRes mappings with your image paths
+
+3. To customize colors/styling:
+   - Edit: app/src/main/res/values/themes in colors.xml
+
+4. To add more document types:
+   - Edit: AddEditCardActivity.kt - add to cardTypes list
+   - Edit: CardTypeVisuals.kt - add new mapping with background + logo
+
+================================================================================
+SUPPORT / ISSUES
+================================================================================
+
+If build fails:
+  1. Check clean.log or build_full.log for error details
+  2. Try clearing gradle cache: gradlew.bat --stop
+  3. Delete build folder and rebuild: gradlew.bat clean assembleDebug
+
+If app crashes on device:
+  1. View device logs: adb logcat | findstr docexpiry
+  2. Check error messages in logcat output
+  3. Ensure device Android version matches (SDK 30+)
+
+If you need help with specific changes:
+  - All code files are in: app/src/main/java/com/example/docexpiry/
+  - All layout files are in: app/src/main/res/layout/
+  - All drawables are in: app/src/main/res/drawable/
+
+================================================================================
+QUICK REFERENCE - COPY & PASTE COMMANDS
+================================================================================
+
+Open CMD.EXE and run:
+
+  cd C:\Users\Shara\AndroidStudioProjects\DocExpiry
+  BUILD_SIMPLE.bat
+
+Or:
+
+  cd C:\Users\Shara\AndroidStudioProjects\DocExpiry
+  set JAVA_HOME=
+  gradlew.bat clean assembleDebug
+
+Then find APK at:
+  app\build\outputs\apk\debug\app-debug.apk
+
+================================================================================
+

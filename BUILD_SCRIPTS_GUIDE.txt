@@ -1,0 +1,158 @@
+BUILD SCRIPTS AVAILABLE
+=======================
+
+Located in: C:\Users\Shara\AndroidStudioProjects\DocExpiry
+
+1. BUILD_SIMPLE.bat
+   - Minimal, clean script
+   - Clears JAVA_HOME issues automatically
+   - Builds debug APK only
+   - Good for testing compilation
+
+2. build_and_run_simple.bat
+   - Builds APK
+   - Installs on device
+   - Launches app automatically
+   - RECOMMENDED - Use this one first!
+
+3. BUILD_ONLY.bat
+   - Just builds APK
+   - No install or run
+   - Useful for checking build errors
+
+4. BUILD_AND_RUN.bat
+   - Full pipeline: clean → build → install → run
+   - May have issues with JAVA_HOME
+   - (Fixed version available in BUILD_SIMPLE.bat)
+
+QUICK START
+===========
+
+Method 1: Use the Script (Easiest)
+  1. Open Command Prompt (cmd.exe)
+  2. Navigate: cd C:\Users\Shara\AndroidStudioProjects\DocExpiry
+  3. Run: build_and_run_simple.bat
+  4. Wait for "App launched!"
+  5. Done! App is running
+
+Method 2: Manual Commands
+  cd C:\Users\Shara\AndroidStudioProjects\DocExpiry
+  .\gradlew.bat clean
+  .\gradlew.bat assembleDebug
+  .\gradlew.bat installDebug
+  adb shell am start -n com.example.docexpiry/.MainActivity
+
+Method 3: Android Studio
+  1. Open Android Studio
+  2. File → Open Project → select DocExpiry folder
+  3. Click green Run button
+  4. Select device
+  5. Done!
+
+GRADLE WRAPPER COMMANDS
+=======================
+
+Clean project:
+  .\gradlew.bat clean
+
+Build debug APK:
+  .\gradlew.bat assembleDebug
+
+Build release APK:
+  .\gradlew.bat assembleRelease
+
+Install debug APK:
+  .\gradlew.bat installDebug
+
+Install and run:
+  .\gradlew.bat installDebug -wait
+  adb shell am start -n com.example.docexpiry/.MainActivity
+
+Run tests:
+  .\gradlew.bat test
+
+Check dependencies:
+  .\gradlew.bat dependencies
+
+Stop gradle daemon:
+  .\gradlew.bat --stop
+
+ADB COMMANDS
+============
+
+List connected devices:
+  adb devices
+
+Install APK:
+  adb install -r app\build\outputs\apk\debug\app-debug.apk
+
+Uninstall app:
+  adb uninstall com.example.docexpiry
+
+View logs:
+  adb logcat
+  adb logcat | findstr /I "docexpiry"
+  adb logcat -c (clear logs)
+
+Launch app:
+  adb shell am start -n com.example.docexpiry/.MainActivity
+
+Push file to device:
+  adb push <local_file> /sdcard/<filename>
+
+Pull file from device:
+  adb pull /sdcard/<filename> <local_path>
+
+Device shell:
+  adb shell
+
+TROUBLESHOOTING
+===============
+
+If 'adb' not found:
+  setx ANDROID_SDK_ROOT "C:\Users\Shara\AppData\Local\Android\Sdk"
+  Restart terminal
+
+If JAVA_HOME error:
+  set JAVA_HOME=
+  .\gradlew.bat assembleDebug
+
+If build fails:
+  .\gradlew.bat clean
+  .\gradlew.bat assembleDebug
+
+If device not found:
+  adb devices (check if device listed)
+  Enable USB debugging on device
+  Reinstall drivers if needed
+
+If app crashes:
+  adb logcat | findstr docexpiry
+  Check build log for errors
+
+NEXT STEPS
+==========
+
+1. Choose a build method above
+2. Run the build command/script
+3. Wait for "BUILD SUCCESSFUL"
+4. Tap the floating + button on the app
+5. Test adding a document
+6. Verify logos appear on cards
+
+DOCUMENTATION
+==============
+
+- ADD_BUTTON_COMPLETE.md - Full implementation guide
+- ADD_BUTTON_README.md - Testing instructions
+- QUICK_REFERENCE.txt - This file (quick commands)
+- QUICK_BUILD_GUIDE.txt - Build troubleshooting
+
+Files created for you:
+✓ BUILD_SIMPLE.bat
+✓ build_and_run_simple.bat
+✓ ADD_BUTTON_COMPLETE.md
+✓ ADD_BUTTON_README.md
+✓ QUICK_BUILD_GUIDE.txt
+✓ QUICK_REFERENCE.txt (this file)
+

@@ -1,0 +1,79 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.7/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:clean
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugResValues
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:dataBindingTriggerDebug
+> Task :app:mapDebugSourceSetPaths
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:checkDebugAarMetadata
+> Task :app:mergeDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:processDebugMainManifest
+> Task :app:dataBindingGenBaseClassesDebug
+> Task :app:processDebugManifest
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:checkDebugDuplicateClasses
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeLibDexDebug
+> Task :app:processDebugResources
+> Task :app:mergeExtDexDebug
+> Task :app:kaptGenerateStubsDebugKotlin
+> Task :app:kaptDebugKotlin
+
+> Task :app:compileDebugKotlin
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/AddEditViewModel.kt:11:42 Unchecked cast: AddEditViewModel to T
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/CardAdapter.kt:53:29 Unnecessary safe call on a non-null receiver of type TextView
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/CardAdapter.kt:54:25 Unnecessary safe call on a non-null receiver of type Chip
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/CardAdapter.kt:117:26 Unnecessary safe call on a non-null receiver of type MaterialButton
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/CardDetailActivity.kt:66:9 This is a delicate API and its use requires care. Make sure you fully read and understand documentation of the declaration that is marked as a delicate API.
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/CardDetailActivity.kt:259:13 'startActivityForResult(Intent, Int): Unit' is deprecated. Deprecated in Java
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/CardDetailActivity.kt:285:13 This is a delicate API and its use requires care. Make sure you fully read and understand documentation of the declaration that is marked as a delicate API.
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/DocumentChooserActivity.kt:59:21 Name shadowed: prefs
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/DocumentChooserActivity.kt:110:31 Parameter 'index' is never used, could be renamed to _
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/DocumentChooserActivity.kt:318:36 Unnecessary non-null assertion (!!) on a non-null receiver of type View
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/DocumentChooserActivity.kt:318:49 Unnecessary non-null assertion (!!) on a non-null receiver of type View
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/DocumentChooserActivity.kt:356:27 Parameter 'card' is never used
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/FullImageActivity.kt:77:13 Variable 'sdf' is never used
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/FullImageActivity.kt:84:17 'startActivityForResult(Intent, Int): Unit' is deprecated. Deprecated in Java
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/MainActivity.kt:98:29 'startActivityForResult(Intent, Int): Unit' is deprecated. Deprecated in Java
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/MainActivity.kt:152:70 Unchecked cast: SpinnerAdapter! to ArrayAdapter<String>
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/MainActivity.kt:296:29 Parameter 'grantResults' is never used, could be renamed to _
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/notifications/ExpiryNotificationReceiver.kt:28:9 This is a delicate API and its use requires care. Make sure you fully read and understand documentation of the declaration that is marked as a delicate API.
+w: file:///C:/Users/Shara/AndroidStudioProjects/DocExpiry/app/src/main/java/com/example/docexpiry/notifications/NotificationManager.kt:252:17 Variable 'thirtyDaysMillis' is never used
+
+> Task :app:compileDebugJavaWithJavac
+> Task :app:processDebugJavaRes
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 44s
+39 actionable tasks: 39 executed

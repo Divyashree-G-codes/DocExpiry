@@ -1,0 +1,93 @@
+╔════════════════════════════════════════════════════════════════╗
+║          DocExpiry - Add Button Implementation                  ║
+║                      QUICK REFERENCE                           ║
+╚════════════════════════════════════════════════════════════════╝
+
+📱 FEATURE ADDED
+  ✓ Floating Action Button (FAB) with + icon
+  ✓ Opens "Add Document" form when tapped
+  ✓ Document logos on each card
+  ✓ All government document types supported
+
+🎯 HOW TO BUILD & RUN
+
+  Option 1 - Simplest (Batch File):
+    C:\Users\Shara\AndroidStudioProjects\DocExpiry\build_and_run_simple.bat
+
+  Option 2 - Command Line:
+    cd C:\Users\Shara\AndroidStudioProjects\DocExpiry
+    .\gradlew.bat assembleDebug
+    .\gradlew.bat installDebug
+    adb shell am start -n com.example.docexpiry/.MainActivity
+
+  Option 3 - Android Studio:
+    1. Open project in Android Studio
+    2. Press green Run button
+    3. Select device
+    4. Done!
+
+📍 LOCATION OF ADD BUTTON
+  - Screen: "Manage govt cards" (main list)
+  - Position: Bottom-right corner (floating)
+  - Icon: Blue + symbol
+  - Tap to: Open add document form
+
+🎨 LOGOS DISPLAY
+  - Each card shows document type logo (top-right)
+  - Automatically selects based on type
+  - Fallback icon if missing
+  - All your drawable logos integrated
+
+✅ VERIFICATION
+  ✓ Code compiles: 0 errors
+  ✓ FAB wired: click listener active
+  ✓ Logo display: fallback working
+  ✓ Ready to run: no blocking issues
+
+⚠️ COMMON ISSUES & FIXES
+
+  Issue: "adb is not recognized"
+  Fix:   setx ANDROID_SDK_ROOT "C:\Users\Shara\AppData\Local\Android\Sdk"
+
+  Issue: Build fails with gradle
+  Fix:   set JAVA_HOME= && .\gradlew.bat assembleDebug
+
+  Issue: Device not found
+  Fix:   adb devices (ensure USB debugging enabled)
+
+  Issue: Add button doesn't show
+  Fix:   Reinstall app: adb uninstall com.example.docexpiry
+
+  Issue: Logos don't display
+  Fix:   Clear cache: adb shell pm clear com.example.docexpiry
+
+🔧 FILES MODIFIED
+  1. MainActivity.kt - FAB click listener added
+  2. CardAdapter.kt - Logo fallback added
+  3. item_card.xml - Logo default drawable
+  4. activity_main.xml - Already had FAB (verified)
+
+📋 TEST CHECKLIST
+  □ App runs without crashes
+  □ Floating + button visible (bottom-right)
+  □ Tap + button opens add form
+  □ Can select document type
+  □ Can take photo or pick from gallery
+  □ Can enter document details
+  □ Can save document
+  □ Document appears in list
+  □ Document shows logo badge
+  □ All card buttons (View, Edit, Share, Delete) work
+
+📞 NEED HELP?
+  1. Check logcat: adb logcat
+  2. Read log files in project root
+  3. Verify device connection: adb devices
+  4. Check AndroidManifest.xml for activity declarations
+
+╔════════════════════════════════════════════════════════════════╗
+║  Ready to build? Run:                                          ║
+║  cd C:\Users\Shara\AndroidStudioProjects\DocExpiry             ║
+║  .\gradlew.bat assembleDebug                                   ║
+╚════════════════════════════════════════════════════════════════╝
+

@@ -1,0 +1,12 @@
+Project dir: C:\Users\Shara\AndroidStudioProjects\DocExpiry
+Auto-set JAVA_HOME to: C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot
+WARNING: Failed to run java. Ensure JAVA_HOME is valid or java is on PATH.
+Running: C:\Users\Shara\AndroidStudioProjects\DocExpiry\gradlew.bat 
+Start-Process : Cannot validate argument on parameter 'ArgumentList'. The argument is null, empty, or an element of the argument collection contains a null value. Supply a 
+collection that does not contain any null values and then try the command again.
+At C:\Users\Shara\AndroidStudioProjects\DocExpiry\build_on_laptop.ps1:82 char:19
++     Start-Process @startInfo
++                   ~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Start-Process], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.StartProcessCommand
+ 
