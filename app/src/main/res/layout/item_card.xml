@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Image Container - Prominent Display -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/bg_header_gradient">
+
+            <!-- Document Photo -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_user"
+                app:shapeAppearanceOverlay="@style/RoundedImageStyle" />
+
+            <!-- Logo Badge -->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="8dp"
+                android:contentDescription="Document Logo"
+                android:elevation="8dp"
+                android:src="@drawable/id_card_icon" />
+
+            <!-- Type Badge -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_margin="8dp"
+                android:text="Document"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <!-- Text Information Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Title Row: Card Type & Authority -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvTypeText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Document Type"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvAuthority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Authority"
+                    android:textSize="12sp"
+                    android:textColor="@color/design_default_color_hint"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:background="@android:color/darker_gray"
+                    android:alpha="0.1" />
+
+            </LinearLayout>
+
+            <!-- Card Number -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No:"
+                    android:textSize="12sp"
+                    android:textColor="@color/design_default_color_hint"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/tvNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123456789"
+                    android:textSize="12sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <!-- Owner Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textSize="12sp"
+                    android:textColor="@color/design_default_color_hint"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView
+                    android:id="@+id/tvOwner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="John Doe"
+                    android:textSize="12sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <!-- Dates Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tvIssued"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Issued: 01/01/2020"
+                    android:textSize="11sp"
+                    android:textColor="@color/design_default_color_hint" />
+
+                <TextView
+                    android:id="@+id/tvExpiry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Expiry: 31/12/2025"
+                    android:textSize="11sp"
+                    android:textColor="@color/design_default_color_hint" />
+
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:alpha="0.1"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="👁 View"
+                    android:textSize="12sp"
+                    app:backgroundTint="@color/design_default_color_primary"
+                    app:cornerRadius="6dp"
+                    android:layout_marginEnd="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="✏️ Edit"
+                    android:textSize="12sp"
+                    app:backgroundTint="@color/design_default_color_primary"
+                    app:cornerRadius="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnShare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📤 Share"
+                    android:textSize="12sp"
+                    app:backgroundTint="@color/design_default_color_primary"
+                    app:cornerRadius="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🗑️ Delete"
+                    android:textSize="12sp"
+                    app:backgroundTint="#FF5252"
+                    app:cornerRadius="6dp"
+                    android:layout_marginStart="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Background for card type styling -->
+        <View
+            android:id="@+id/bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.0" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

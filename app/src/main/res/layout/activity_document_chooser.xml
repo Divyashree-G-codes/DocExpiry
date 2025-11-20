@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/official_documents"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <!-- Visible logout icon for clarity (tapping will perform logout) -->
+        <ImageView
+            android:id="@+id/ivLogoutVisible"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="end"
+            android:contentDescription="@string/logout"
+            android:src="@drawable/ic_logout"
+            app:tint="@color/black"
+            android:padding="4dp"
+            android:visibility="visible" />
+
+        <GridLayout
+            android:id="@+id/gridDocs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true" />
+
+    </LinearLayout>
+
+</ScrollView>

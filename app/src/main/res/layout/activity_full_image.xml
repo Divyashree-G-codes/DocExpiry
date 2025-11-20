@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Full screen image viewer with flip to details - updated with border -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <!-- Front side: full image -->
+    <LinearLayout
+        android:id="@+id/frontSide"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:foregroundGravity="center"
+        android:clipToPadding="false">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_border"
+            android:padding="6dp"
+            android:elevation="8dp">
+
+            <ImageView
+                android:id="@+id/ivFull"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/full_image_cd" />
+        </FrameLayout>
+
+        <!-- front side: image only; actions moved to details side -->
+
+    </LinearLayout>
+
+    <!-- Back side: details (initially hidden) -->
+    <ScrollView
+        android:id="@+id/backSide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_border"
+                android:padding="16dp"
+                android:elevation="6dp">
+
+                <TextView
+                    android:id="@+id/tvDetailName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:paddingBottom="8dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFFFFF"
+                    android:alpha="0.2"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:paddingBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailAuthority"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:paddingBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailIssued"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:paddingBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailExpiry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:paddingBottom="4dp" />
+
+                <!-- Tapping the details flips back to image -->
+                <TextView
+                    android:id="@+id/tvFlipHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tap here to view image"
+                    android:textColor="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:paddingTop="16dp" />
+
+                <!-- Action buttons on details side: Edit and Share text -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnEditDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnShareDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/share"
+                        android:layout_marginStart="12dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDeleteDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delete"
+                        android:layout_marginStart="12dp" />
+
+                </LinearLayout>
+
+             </LinearLayout>
+
+         </LinearLayout>
+     </ScrollView>
+
+ </FrameLayout>

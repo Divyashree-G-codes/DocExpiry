@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DocExpiry</string>
+    <string name="doc_count">%1$d document%2$s</string>
+    <string name="logout_title">Logout</string>
+    <string name="logout_message">Are you sure you want to logout?</string>
+    <string name="logout">Logout</string>
+    <string name="cancel">Cancel</string>
+    <string name="manage_welcome">Manage your government documents</string>
+    <string name="search_hint">Search by name, number...</string>
+    <!-- Missing strings referenced by layouts -->
+    <string name="add_document">Add Document</string>
+    <string name="upload_store_docs">Upload and store your documents</string>
+    <string name="document_photo">Document Photo</string>
+    <string name="tap_add_change_photo">Tap to add or change photo</string>
+    <string name="document_type">Document Type</string>
+    <string name="issuing_authority">Issuing Authority</string>
+    <string name="document_number">Document Number</string>
+    <string name="name_on_doc">Name on Document</string>
+    <string name="address">Address</string>
+    <string name="dob">Date of Birth</string>
+    <string name="issued_date">Issued Date</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="save_document">Save Document</string>
+    <string name="official_documents">Official Documents</string>
+    <string name="full_image_cd">Full image</string>
+    <string name="edit">Edit</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+    <string name="registration_tagline">Government Document Manager</string>
+    <string name="registration_title">Registration - details as on Government ID</string>
+    <string name="name_as_on_gov_id">Name as on Government ID</string>
+    <string name="dob_as_on_gov_id">Date of Birth (DD/MM/YYYY) — as on Government ID</string>
+    <string name="address_as_on_gov_id">Address as on Government ID</string>
+    <string name="save_registration">Save Registration</string>
+    <string name="registration_footer_info">This information will be used to manage your government documents securely.</string>
+    <string name="document_image">Document image</string>
+    <string name="tap_to_add_manage">Tap to add or manage</string>
+    <string name="add">Add</string>
+</resources>
